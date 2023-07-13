@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>SignUp Page</title>
+</head>
+<body>
+    <div class="sign_up-container">
+        <h1>Create A New Account Here</h1>
+            <form action="/signUp" method="POST" >
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <p class="emailMessage">Email does not exist</p>
+                <input class="input" type="password" placeholder="Password" name="password" minlength="8" required>
+                <input class="input1" type="password" placeholder="Confrim Password" name="confrimPassword" minlength="8"  required>
+                <p class="message">Passwords do not match</p>
+                <button>Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+
+
+
+    <script>
+        const form = document.querySelector('form');
+        const passwordInput = document.querySelector('input[name="password"]');
+        const confirmPasswordInput = document.querySelector('input[name="confrimPassword"]');
+        const message = document.querySelector(".message");
+        const emailInput = document.querySelector('input[name="email"]');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailMessage = document.querySelector(".emailMessage");
+
+        form.addEventListener('submit', (e) => {
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            e.preventDefault();
+            message.classList.add("wrong");
+            passwordInput.classList.add("wrong_input")
+            confirmPasswordInput.classList.add("wrong_input")
+        }else if(!emailPattern.test(emailInput.value)){
+            e.preventDefault();
+            emailMessage.classList.add("wrong")
+            emailInput.classList.add("wrong_input")
+        }
+        })
+        passwordInput.addEventListener('focus', function() {
+            message.classList.remove("wrong");
+            passwordInput.classList.remove("wrong_input");
+            confirmPasswordInput.classList.remove("wrong_input");
+        });
+        confirmPasswordInput.addEventListener('focus', function(){
+            message.classList.remove("wrong");
+            passwordInput.classList.remove("wrong_input");
+            confirmPasswordInput.classList.remove("wrong_input");
+        });
+    </script>
+</body>
+</html>

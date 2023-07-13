@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Login page</title>
+</head>
+<body>
+    <h1>Login page</h1>
+
+
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username">
+        <div>
+            <input type="password" name="password" placeholder="Password">
+            <p class="message">Password is incorrect</p>
+        </div>
+        <button>Login</button>
+    </form>
+
+
+    <SCript>
+        const form = document.querySelector('form');
+        const passwordInput = document.querySelector('input[name="password"]');
+        const emailInput = document.querySelector('input[name="email"]');
+        const message = document.querySelector('.message');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailMessage = document.querySelector('.emailMessage');
+        form.addEventListener("submit", (e)=>{
+        })
+
+    </SCript>
+</body>
+</html>
