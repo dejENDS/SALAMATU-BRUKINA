@@ -6,11 +6,17 @@ creating digital solutions to make a positive impact and contribute to the field
 deJENDS is composed of seven IT students 
 
   • Guebre Guedow Eddy Giovanni (Team Captain)
+  
   • Adjei David Nana Ntow
+  
   • Agyei Emmanuel Quainoo
+  
   • Boateng Nana Yaw
+  
   • Cudjoe Solomon
+  
   • Gyeti Julius
+  
   • Saah Emmanuel
 
               # ENGAGEMENT WITH THE CLIENT
