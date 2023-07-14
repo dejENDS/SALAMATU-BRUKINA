@@ -37,7 +37,7 @@ Manager’s email
 complaint
 • The user should be able to log out after using the website
 
-                # Architectural and logical components of the website
+                # ARCHITECTURAL AND LOGICAL COMPONENTS OF THE WEBSITE
                 
 • User Interface (UI): The UI focuses on what the user sees when he or she visiats the website. HTML, CSS and JAVASCRIPT will 
 be the technologies used to generate the UI of this website
@@ -62,7 +62,7 @@ handled the right way. It includes services like registration, login or authoriz
 • Error handling: This helps handle errors by capturing all errors that happened to facilitate debugging or troubleshooting
 processes
 
-                # Methodology used: Agile 
+                # METHODOLOGY USED: AGILE 
                 
 The use of agile methodology to develop and design the website is due to the fact that using the agile model helps increase productivity and 
 efficiency by constantly keeping in touch with the clients and frequentlyaccessing their reviews. This process will maximize the level of 
