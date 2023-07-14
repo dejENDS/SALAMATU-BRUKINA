@@ -32,15 +32,21 @@ customers. Some considerations are to be made for the rest of the project, but t
                # SYSTEM'S FUNCTIONALITIES
 
 • A page where customers/users can sign up
+
 • Users should be able to log in after they sign up
+
 • After the user has logged in, he or she should be able to file a 
 complaint about the product on the page
+
 • The user should also have the space to make a request for some of 
 the product on the page
+
 • Complaints and requests made by the user should be sent to the 
-Manager’s email
+Administrator
+
 • The user must receive feedback after making a request or filing a 
 complaint
+
 • The user should be able to log out after using the website
 
                 # ARCHITECTURAL AND LOGICAL COMPONENTS OF THE WEBSITE
