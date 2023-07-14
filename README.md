@@ -2,8 +2,7 @@
 
 dejENDS is a team of seven dynamic IT students oriented towards solving real-life problems and 
 creating digital solutions to make a positive impact and contribute to the field.
-
-deJENDS is composed of seven IT students 
+ 
 
   • Guebre Guedow Eddy Giovanni (Team Captain)
   
