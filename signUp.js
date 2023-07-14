@@ -9,7 +9,7 @@ var express                  = require('express'),
 main();
 async function main(){
     try{
-        mongoose.connect("mongodb://127.0.0.1:27017/SignUp");
+        mongoose.connect("mongodb+srv://dnnadjei:DAydNNya@salsburkina.yln5sw7.mongodb.net/");
         console.log("Connected");
     }catch(err){
         console.log(err);
@@ -60,13 +60,18 @@ app.post("/signUp", function(req, res){
     })
 })
 
+
 app.get("/login", function(req, res){
     res.render("login");
 })
 
+app.get("/errLogin", function(req, res){
+    res.render("errLogin");
+})
+
 app.post("/login", passport.authenticate("local", {
     successRedirect: "/secret",
-    failureRedirect: "/login" 
+    failureRedirect: "/errLogin" 
 }))
 
 function isLoggedIn(req, res, next){

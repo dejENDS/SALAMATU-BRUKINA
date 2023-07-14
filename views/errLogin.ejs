@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Login page</title>
+    <title>Login</title>
+
+<style>
+    .message {
+        color: red;
+        display: block;
+    }
+    input{
+        color: red;
+        border: red solid 1px;
+    }
+</style>
+
 </head>
+
 <body>
-    <h1>Login page</h1>
-
-
     <form action="/login" method="POST">
         <input type="text" name="username" placeholder="Username">
         <div>
             <input type="password" name="password" placeholder="Password">
+            <p class="message">Username or Password is incorrect</p>
         </div>
         <button>Login</button>
     </form>
-    <SCript>
-    
 
-    </SCript>
+
 </body>
 </html>
