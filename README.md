@@ -10,7 +10,7 @@ creating digital solutions to make a positive impact and contribute to the field
   
   • Agyei Emmanuel Quainoo
   
-  • Boateng Nana Yaw
+  • Boateng Nana Yaw Agyeman
   
   • Cudjoe Solomon
   
