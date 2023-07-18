@@ -38,22 +38,26 @@
     <header>
         <nav>
             <h4><li><a href="/">Sal's Brukina</a></li></h4>
-            <ul>
-                <li><a href="/login">Login</a></li>
+            <ul>                
+                <li><a href="/secret">Customer Interface</a></li>
                 <li><a href="/signup">Sign Up</a></li>
-                <li><a href="/logout">LogOut</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Login page</h1>
-    <form action="/login" method="POST">
-        <input class="wrong_input" type="text" name="username" placeholder="Username">
-        <div>
-            <input class="wrong_input" type="password" name="password" placeholder="Password">
-            <p class="wrong message">Username or Password is incorrect</p>
+    <div class="container">
+        <div class="login_container">
+            <h1>Login Page</h1>
+            <form action="/login" method="POST">
+                <input class="wrong_input" type="text" name="username" placeholder="Username">
+                <div>
+                    <input class="wrong_input" type="password" name="password" placeholder="Password">
+                    <p class="wrong message">Username or Password is incorrect</p>
+                </div>
+                <button>Login</button>
+            </form>
         </div>
-        <button>Login</button>
-    </form>
+    </div>
+    
 
 <script>
     const passwordInput = document.querySelector('input[name="password"]');

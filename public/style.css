@@ -15,14 +15,18 @@ body{
 header{
   height: 5vh;
   width: 100%;
-  background-color: #ccc;
+  background-color: silver;
 }
 
 header a{
   padding: 0px;
-  background-color: #ccc;
+  background-color: silver;
   color: white;
   text-decoration: none;
+}
+
+header a:hover{
+  color: aquamarine;
 }
 
 nav{
@@ -80,7 +84,10 @@ h1 {
     border: none;
     cursor: pointer;
   }
-  
+  button:hover{
+    background-color: white;
+    color: #4caf50;
+  }
   /* Style the link */
   a {
     text-decoration: none;
@@ -111,7 +118,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #a9a9ab
+  background-color: silver;
 }
 
 .sign_up-container,
@@ -123,12 +130,13 @@ li {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: rgba(235, 172, 101, 0.884);
+    background-color: rgba(238, 189, 143, 0.568);
+    box-shadow: #4133190f 0px 0px 10px 20px;
 }
 
 p a{
     padding: 0px;
-    background-color: white;
+    background-color: rgba(238, 189, 143, 0.568);
     color: blue;
 }
 
