@@ -6,29 +6,69 @@
     <link rel="stylesheet" href="/style.css">
     <title>Login</title>
 
-<style>
-    .message {
-        color: red;
-        display: block;
-    }
-    input{
-        color: red;
-        border: red solid 1px;
-    }
-</style>
+<!-- <style>
+    input[type="text"],
+    input[type="password"],
+    input[type= "email"] {
+        width: 350px;
+        height: 2rem;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+  }
+  .wrong_input{
+      color: red;
+      border: red 1px solid;
+  }
+  .message{
+      color: black;
+      display: none;
+  }
+  .wrong{
+      color: red;
+      display: block;
+  }
+
+</style> -->
 
 </head>
 
 <body>
+    <header>
+        <nav>
+            <h4><li><a href="/">Sal's Brukina</a></li></h4>
+            <ul>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/logout">LogOut</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Login page</h1>
     <form action="/login" method="POST">
-        <input type="text" name="username" placeholder="Username">
+        <input class="wrong_input" type="text" name="username" placeholder="Username">
         <div>
-            <input type="password" name="password" placeholder="Password">
-            <p class="message">Username or Password is incorrect</p>
+            <input class="wrong_input" type="password" name="password" placeholder="Password">
+            <p class="wrong message">Username or Password is incorrect</p>
         </div>
         <button>Login</button>
     </form>
 
-
+<script>
+    const passwordInput = document.querySelector('input[name="password"]');
+    const username = document.querySelector("input[name='username']");
+    const message = document.querySelector(".wrong")
+    passwordInput.addEventListener('focus', function() {
+            message.classList.remove("wrong");
+            passwordInput.classList.remove("wrong_input");
+            message.classList.remove("wrong_input");
+    });
+    passwordInput.addEventListener('focus', function() {
+        message.classList.remove("wrong");
+        passwordInput.classList.remove("wrong_input");
+        confirmPasswordInput.classList.remove("wrong_input");
+    });
+</script>
 </body>
 </html>
