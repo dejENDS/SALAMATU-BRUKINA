@@ -3,26 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h4><li><a href="/">Sal's Brukina</a></li></h4>
-            <ul>
-                <% if(!currentUser){ %>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/signup">Sign Up</a></li>
-                <li><a href="/secret">Customer Interface</a></li>
-                <% } else { %>
-                <li><a href="#">Sign In As <%= currentUser.username %></a></li>
-                <li><a href="/secret">Customer Interface</a></li>
-                <li><a href="/logout">LogOut</a></li>
-                <% } %>
-            </ul>
-        </nav>
-    </header>
-    <h1>This is the HomePage</h1>
+
+    <section id="heading">               
+           <form action="https://formspree.io/f/maygyvzr" method="post">
+            <img src="img/2dc5c6b1-ef7a-445f-8778-d67cc043feae.png" alt="">
+            <h1>Customer</h1> 
+            <h3>Complaint</h3>
+            <h4>Center</h4>
+            <div id="inputs_field"><label for="name">Name:</label>
+                <input type="text" name="name" required placeholder="Your full name" id="name">
+            </div>
+            <div id="inputs_field"><label for="email">Email:</label>
+                <input type="email" name="email" required placeholder="Your email" id="email">
+            </div>
+            <div id="inputs_field"><label for="phone">Phone:</label>
+                <input type="text" name="number" required placeholder="Your phone number" id="phone">
+            </div>
+            <div id="inputs_field"><label for="subject">Subject:</label>
+                <input type="text" name="subject" required placeholder="Subject" id="subject">
+            </div>
+
+            <div id="inputs_field"><label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit">submit</button>
+           </form>
+       
+       
+    </section>
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBdCA57ltl69M30NDfyOW4GnvuiJi7FKtA",
+          authDomain: "salamatu-project.firebaseapp.com",
+          projectId: "salamatu-project",
+          storageBucket: "salamatu-project.appspot.com",
+          messagingSenderId: "914125841256",
+          appId: "1:914125841256:web:cebeafd5f5952b37cdacdd"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+    
 </body>
 </html>
