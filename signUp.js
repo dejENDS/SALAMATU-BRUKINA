@@ -37,11 +37,11 @@ passport.deserializeUser(User.deserializeUser());
 //-------------------------
 //----------------------------
 app.get("/", function(req, res){
-    res.render("index");
+    res.render("index", {currentUser: req.user});
 });
 
 app.get("/signUp", function(req, res){
-    res.render("signUp");
+    res.render("signUp", {currentUser: req.user});
 })
 
 app.post("/signUp", function(req, res){
@@ -62,11 +62,11 @@ app.post("/signUp", function(req, res){
 
 
 app.get("/login", function(req, res){
-    res.render("login");
+    res.render("login", {currentUser: req.user});
 })
 
 app.get("/errLogin", function(req, res){
-    res.render("errLogin");
+    res.render("errLogin", {currentUser: req.user});
 })
 
 app.post("/login", passport.authenticate("local", {
@@ -82,7 +82,7 @@ function isLoggedIn(req, res, next){
 }
 
 app.get("/secret", isLoggedIn, function(req, res){
-    res.render("secret");
+    res.render("Nanaweb", {currentUser: req.user});
 })
 
 app.get("/logout", function(req, res){
@@ -96,16 +96,6 @@ app.get("/logout", function(req, res){
         }
     );
 })
-
-function isLoggedIn(req, res, next){
-    if(req.isAuthenticated()){
-        return next();
-    }
-    res.redirect("/login");
-}
-
-
-
 
 app.listen(3000, function(){
     console.log("listening on port 3000");
