@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px); /* Add a blur effect to the video */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
+    z-index: 2; /* Ensure the overlay is above the video */
+  }
+  
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    z-index: 3; /* Ensure the content is above the overlay */
+  }
+  
+  .typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent; /* Invisible border for animation */
+    animation: typing 4s steps(40) forwards;
+    font-size: 36px; /* Increase font size of welcome text */
+    text-align: center; /* Center the text */
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0;
+      border-right-color: white; /* Border starts as white (invisible) */
+    }
+    100% {
+      width: 100%;
+      border-right-color: transparent; /* Border becomes transparent at the end */
+    }
+  }
+  
+  .centered-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 16px 32px; /* Increase button size */
+    font-size: 18px; /* Increase font size of buttons */
+    border: none;
+    border-radius: 30px; /* Round the button edges */
+    background: linear-gradient(to right, #4CAF50, #45a049); /* Apply gradient background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle box shadow */
+  }
+  
+  .button:hover {
+    background: linear-gradient(to right, #45a049, #4CAF50); /* Gradient on hover */
+  }
+  
+  .button:active {
+    background: linear-gradient(to right, #3e8e41, #45a049); /* Gradient on active */
+  }
+  
