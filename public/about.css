@@ -74,6 +74,7 @@ body {
     border: none;
     border-radius: 30px; /* Round the button edges */
     background: linear-gradient(to right, #4CAF50, #45a049); /* Apply gradient background */
+    text-decoration: none;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;

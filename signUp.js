@@ -82,7 +82,7 @@ function isLoggedIn(req, res, next){
 }
 
 app.get("/secret", isLoggedIn, function(req, res){
-    res.render("Nanaweb", {currentUser: req.user});
+    res.render("index", {currentUser: req.user});
 })
 
 app.get("/logout", function(req, res){
