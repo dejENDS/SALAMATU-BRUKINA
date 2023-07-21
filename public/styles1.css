@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    background: linear-gradient(to left, rgb(43, 43, 243), orange);
+}
+
+#heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#heading h1, h3,h4{
+    color: #002147;
+    font-size: 36px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: white;
+    width: 40%;
+    border: 2px solid #002147;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    box-shadow: 5px 5px 5px #002147;
+    border-radius: 5px;
+    
+}
+
+form input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #002147;
+    padding-left: 10px;
+    height: 40px;
+}
+
+form img{
+    height: 50px;
+    width: 50px;
+    align-self: first baseline;
+    margin-left: 50px;
+}
+
+#inputs_field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+#inputs_field label{
+    margin-right: 10px;
+    color: #002147;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 30px;
+}
+
+form textarea{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid;
+    padding-left: 10px;
+    border: 2px solid #002147;
+   
+
+}
+
+#heading button{
+    background-color: #002147;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 120px;
+    cursor: pointer;
+}
+
+/*Media Queries*/
+
+
+@media only screen and (min-width:481px) and (max-width:615px){
+   
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        background-color: white;
+        width: 90%;
+        border: 2px solid #002147;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        box-shadow: 5px 5px 5px #002147;
+        border-radius: 5px;
+    }
+
+    form input{
+        width: 300px;
+        padding-left: 10px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    form textarea{
+        width: 300px;
+        height: 200px;   
+        margin-right: 20px;
+    }
+
+}
+
+@media only screen and (min-width:616px) and (max-width:768px){
+   
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        background-color: white;
+        width: 90%;
+        border: 2px solid #002147;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        box-shadow: 5px 5px 5px #002147;
+        border-radius: 5px;
+    }
+
+    form input{
+        width: 25rem;
+        padding-left: 10px;
+        height: 30px;
+    }
+
+    form textarea{
+        width: 25rem;
+        height: 200px;   
+    }
+
+}
+
+@media only screen and (min-width:769px) and (max-width:1080px){
+   
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        background-color: white;
+        width: 90%;
+        border: 2px solid #002147;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        box-shadow: 5px 5px 5px #002147;
+        border-radius: 5px;
+    }
+
+    form input{
+        width: 25rem;
+        padding-left: 10px;
+        height: 30px;
+    }
+
+    form textarea{
+        width: 25rem;
+        height: 200px;   
+    }
+
+}
+
+
+@media only screen and (min-width:1081px) and (max-width:1220px){
+   
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        background-color: white;
+        width: 70%;
+        border: 2px solid #002147;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        box-shadow: 5px 5px 5px #002147;
+        border-radius: 5px;
+    }
+
+    form input{
+        width: 25rem;
+        padding-left: 10px;
+        height: 30px;
+    }
+
+    form textarea{
+        width: 25rem;
+        height: 200px;   
+    }
+
+}
+
+@media only screen and (min-width:1280px) and (max-width:1400px){
+   
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        background-color: white;
+        width: 90%;
+        border: 2px solid #002147;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        box-shadow: 5px 5px 5px #002147;
+        border-radius: 5px;
+    }
+
+    form input{
+        width: 30rem;
+        padding-left: 10px;
+        height: 30px;
+    }
+
+    form textarea{
+        width: 30rem;
+        height: 200px;   
+    }
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width:320px) and (max-width:480px){
+    body{
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+    form{
+        margin-top: 30px;
+        background-color: white;
+        width: 100%;
+        border: 2px solid #002147;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-right: 50px;
+        margin-left: 100px;
+            
+    }
+
+    form input{
+        width: 200px;
+        padding-left: 10px;
+        height: 30px;
+    }
+    
+    form textarea{
+        width: 200px;
+        height: 200px;   
+    }
+
+    #inputs_field label{
+        margin-right: 10px;
+        color: #002147;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        margin: 0;
+        
+    }
+
+    #inputs_field{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: flex-start;
+        margin: 10px;
+        
+    }
+    
+    #heading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #heading h1,h3,h4{
+        color: #002147;
+        font-size: 24px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+    }
+
+    #heading button{
+        
+        margin-left: 60px;
+        cursor: pointer;
+    }
+    
+}
