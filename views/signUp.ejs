@@ -63,6 +63,11 @@
             emailInput.classList.add("wrong_input")
         }
         })
+        emailInput.addEventListener('focus', function(){
+            emailMessage.classList.remove("wrong");
+            emailInput.classList.remove("wrong_input");
+        })
+
         passwordInput.addEventListener('focus', function() {
             message.classList.remove("wrong");
             passwordInput.classList.remove("wrong_input");
