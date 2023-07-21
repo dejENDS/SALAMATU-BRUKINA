@@ -9,6 +9,23 @@
 </head>
 <body>
 
+    <header>
+        <nav>
+            <h4><li><a href="/">Sal's Brukina</a></li></h4>
+            <ul>
+                <% if(!currentUser){ %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/secret">Customer Interface</a></li>
+                <% } else { %>
+                <li><a href="#">Sign In As <%= currentUser.username %></a></li>
+                <li><a href="/secret">Customer Interface</a></li>
+                <li><a href="/logout">LogOut</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
+
     <section id="heading">               
            <form action="https://formspree.io/f/maygyvzr" method="post">
             <!-- <img src="img/2dc5c6b1-ef7a-445f-8778-d67cc043feae.png" alt=""> -->
