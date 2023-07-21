@@ -15,12 +15,12 @@ body{
 header{
   height: 5vh;
   width: 100%;
-  background-color: silver;
+  background-color: #6d36f8d2;
 }
 
 header a{
   padding: 0px;
-  background-color: silver;
+  background-color: transparent;
   color: white;
   text-decoration: none;
 }
@@ -118,7 +118,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: silver;
+  background-color: #605cd4;
 }
 
 .sign_up-container,

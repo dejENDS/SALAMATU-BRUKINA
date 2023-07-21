@@ -1,93 +1,188 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+  background-color: #605cd4;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #6d36f8d2;
+  color: #e6ef6a;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: none;
+}
+
+nav a:hover{
+  color: blue;
+}
+
+/* Style the hero section */
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  height: 95vh;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 18px 40px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
   }
-  
-  .background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .background-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(5px); /* Add a blur effect to the video */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
-    z-index: 2; /* Ensure the overlay is above the video */
-  }
-  
-  .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: #fff;
-    z-index: 3; /* Ensure the content is above the overlay */
-  }
-  
-  .typing-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid transparent; /* Invisible border for animation */
-    animation: typing 4s steps(40) forwards;
-    font-size: 36px; /* Increase font size of welcome text */
-    text-align: center; /* Center the text */
-  }
-  
-  @keyframes typing {
-    0% {
-      width: 0;
-      border-right-color: white; /* Border starts as white (invisible) */
-    }
-    100% {
-      width: 100%;
-      border-right-color: transparent; /* Border becomes transparent at the end */
-    }
-  }
-  
-  .centered-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .button {
-    padding: 16px 32px; /* Increase button size */
-    font-size: 18px; /* Increase font size of buttons */
-    border: none;
-    border-radius: 30px; /* Round the button edges */
-    background: linear-gradient(to right, #4CAF50, #45a049); /* Apply gradient background */
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle box shadow */
-  }
-  
-  .button:hover {
-    background: linear-gradient(to right, #45a049, #4CAF50); /* Gradient on hover */
-  }
-  
-  .button:active {
-    background: linear-gradient(to right, #3e8e41, #45a049); /* Gradient on active */
-  }
-  
+}
+
+.hero-content h1,
+.hero-content p {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Style the about section */
+#about {
+  background-color: #fff;
+  padding: 50px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.about-content img {
+  max-width: 100%;
+}
+
+/* Style the product section */
+#products {
+  background-color: #f3f3f3;
+  padding: 50px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.product h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.product p {
+  font-size: 1.1rem;
+}
+
+/* Style the footer */
+footer {
+  background-color: #605cd4;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content .logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-content .contact-info p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer-content ul li {
+  margin-right: 10px;
+}
+
+.footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content ul li a img {
+  width: 30px;
+  height: 30px;
+}

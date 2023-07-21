@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/about.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/secret">Customer Interface</a></li>
+    </ul>
+  </nav>
+  <!-- Hero section -->
+  <section id="home">
+    <div class="hero-content">
+      <h1>Welcome to Salamatu Special Brukina</h1>
+      <p>Delicious traditional beverage with a special twist</p>
+      <% if(!currentUser) {%>
+        <a class="button" href="/signUp">Sign Up</a>
+        <a class="button" href="/login">Log In</a>
+        <% } else{%>
+        <a class="button" href="/logOut">Log Out</a>
+      <% } %>
+    </div>
+  </section>
+      
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+
+</body>
+</html>

@@ -37,8 +37,12 @@ passport.deserializeUser(User.deserializeUser());
 //-------------------------
 //----------------------------
 app.get("/", function(req, res){
-    res.render("about", {currentUser: req.user});
+    res.render("home", {currentUser: req.user});
 });
+
+app.get("/about", function(req, res){
+    res.render("about", {currentUser: req.user});
+})
 
 app.get("/signUp", function(req, res){
     res.render("signUp", {currentUser: req.user});
@@ -70,7 +74,7 @@ app.get("/errLogin", function(req, res){
 })
 
 app.post("/login", passport.authenticate("local", {
-    successRedirect: "/secret",
+    successRedirect: "/about",
     failureRedirect: "/errLogin" 
 }))
 
