@@ -18,8 +18,12 @@
    <h1>Welcome to Salamatu Special Brukina </h1>
     </div>
     <div class="centered-div">
+      <% if(!currentUser) {%>
       <a class="button" href="/signUp">Sign Up</a>
       <a class="button" href="/login">Log In</a>
+      <% } else{%>
+      <a class="button" href="/logOut">Log Out</a>
+      <% } %>
     </div>
   </div>
 </body>
