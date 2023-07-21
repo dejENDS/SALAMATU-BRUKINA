@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Requests</title>
+    <style>
+        /* Add any additional styles for your webpage here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+
+        }
+
+          #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        h1 {
+           text-align: center;
+        }
+
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      width: 100%;
+    }
+
+    .form-inputs {
+      width: 95%;
+      margin-bottom: 15px;
+    }
+
+    label, input, textarea, select {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+
+    /* Custom select dropdown */
+    .custom-select {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .custom-select select {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 6px;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+        appearance: none;
+    }
+
+    .custom-select::after {
+          content: "\f078"; /* FontAwesome chevron-down icon */
+          font-family: FontAwesome;
+         position: absolute;
+          top: 50%;
+          right: 10px;
+         transform: translateY(-50%);
+         pointer-events: none;
+    }
+
+/* Hide default arrow icon in IE */
+    .custom-select select::-ms-expand {
+         display: none;
+    }
+
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    input[type="submit"] {
+      padding: 12px 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+	textarea#request {
+      height: 120px;
+      resize: vertical;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+     @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+
+    .success-message {
+      color: green;
+      margin-top: 10px;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+
+    header {
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      color: white;
+      margin: 0;
+      padding: 10px;
+      font-size: 32px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 0;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+<video id="video-bg" autoplay loop muted>
+    <source src="pexels-tima-miroshnichenko-5452529%20(540p).mp4" type="video/mp4">
+    <!-- Add additional source elements for other video formats -->
+    Your browser does not support the video tag.
+</video>
+
+<!-- Rest of your existing HTML code -->
+<header>
+    <h1>Customer Requests</h1>
+</header>
+
+<form id="requestform" action="send_email.php" method="post">
+    <div class="form-inputs">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" required>
+<form id="requestform" action="send_email.php" method="post">
+    <div class="form-inputs">
+        <label for="region">Location:</label>
+        <div class="custom-select">
+            <select id="region" required>
+                <option value="" disabled selected>Select Region</option>
+                <option value="Ashanti Region">Ashanti Region</option>
+                <option value="Bono East Region">Bono East Region</option>
+                <option value="Bono Region">Bono Region</option>
+                <option value="Central Region">Central Region</option>
+                <option value="Eastern Region">Eastern Region</option>
+                <option value="Greater Accra Region">Greater Accra Region</option>
+                <option value="Ahafo Region">Ahafo Region</option>
+                <option value="North East Region">North East Region</option>
+                <option value="Northern Region">Northern Region</option>
+                <option value="Oti Region">Oti Region</option>
+                <option value="Savannah Region">Savannah Region</option>
+                <option value="Upper East Region">Upper East Region</option>
+                <option value="Upper West Region">Upper West Region</option>
+                <option value="Volta Region">Volta Region</option>
+                <option value="Western North Region">Western North Region</option>
+                <option value="Western Region">Western Region</option>
+            </select>
+        </div>
+    </div>
+
+        <label for="request">Request:</label>
+        <textarea id="request" rows="4" required></textarea>
+    </div>
+
+    <input type="submit" value="Submit Complaint">
+</form>
+
+<footer>
+    <p>&copy; Salamatu's Brukina. All rights reserved.</p>
+</footer>
+
+<script>
+         document.getElementById("requestform").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var subject = document.getElementById("subject").value;
+      var region = document.getElementById("region").value;
+      var request = document.getElementById("request").value;
+
+      // You can add additional validation here if needed
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "send_email.php", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.success) {
+                    alert(response.message);
+
+                    // Clear the form
+                    document.getElementById("requestform").reset();
+                } else {
+                    alert(response.message);
+                }
+            }
+        };
+
+        // Send the form data to the PHP file
+        xhr.send(
+            "name=" + encodeURIComponent(name) +
+            "&email=" + encodeURIComponent(email) +
+            "&phone=" + encodeURIComponent(phone) +
+            "&subject=" + encodeURIComponent(subject) +
+            "&region=" + encodeURIComponent(region) +
+            "&request=" + encodeURIComponent(request)
+        );
+    });
+    </script>
+<!-- PHP Code: send_email.php -->
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $subject = $_POST["subject"];
+    $region = $_POST["region"];
+    $request = $_POST["request"];
+
+    // Set the email address where you want to receive the form submissions
+    $to = "your_email@example.com";
+
+    // Set the email subject
+    $email_subject = "Customer Request: $subject";
+
+    // Construct the email body
+    $email_body = "Name: $name\n";
+    $email_body .= "Email: $email\n";
+    $email_body .= "Phone: $phone\n";
+    $email_body .= "Subject: $subject\n";
+    $email_body .= "Region: $region\n";
+    $email_body .= "Request: $request\n";
+
+    // Additional headers
+    $headers = "From: $email";
+
+    // Send the email
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        $response = array("success" => true, "message" => "Submitted successfully. Thank you!");
+} else {
+$response = array("success" => false, "message" => "Submission failed. Please try again later.");
+}
+
+// Set the JSON content type and return the JSON response
+header("Content-Type: application/json");
+echo json_encode($response);
+}
+?>
+
+</body>
+</html>
