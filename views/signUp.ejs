@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mobileStyles.css">
     <title>SignUp Page</title>
 </head>
 <body>
     <header>
         <nav>
             <h4><li><a href="/">Sal's Brukina</a></li></h4>
-            <ul>
+            <ul class="desktop_links">
                 <% if(!currentUser){ %>
                 <li><a href="/login">Login</a></li>
-                <li><a href="/signup">Sign Up</a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="/secret">Customer Interface</a></li>
                 <% } else { %>
-                <li><a href="#">Sign In As <%= currentUser.username %></a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="/secret">Customer Interface</a></li>
                 <li><a href="/logout">LogOut</a></li>
                 <% } %>
             </ul>
+            <div class="burger">
+                <img class="compress" src="/img/icon-hamburger.svg" alt="compress">
+                <img class="close display" src="/img/icon-close.svg" alt="close">
+               <ul class="mobile_navs display">
+                <% if(!currentUser){ %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/about">About</a></li>
+                <% } else { %>
+                <li><a href="/about">About</a></li>
+                <li><a href="/logout">LogOut</a></li>
+                <% } %>
+            </ul> 
+            </div>    
         </nav>
     </header>
     <div  class="container">
@@ -81,5 +91,7 @@
             confirmPasswordInput.classList.remove("wrong_input");
         });
     </script>
+
+    <script src="/scripts.js"></script>
 </body>
 </html>

@@ -3,14 +3,42 @@
 <head>
   <link rel="stylesheet" type="text/css" href="/about.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+  <link rel="stylesheet" href="/mobileStyles.css">
 </head>
+
+<style>
+  .burger{
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+  .mobile_navs{
+    position: absolute;
+    left: 4rem;
+
+  }
+</style>
 <body>
   <nav>
-    <ul>
+    <ul class="desktop_links">
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/secret">Customer Interface</a></li>
     </ul>
+    <div class="burger">
+      <img class="compress" src="/img/icon-hamburger.svg" alt="compress">
+      <img class="close display" src="/img/icon-close.svg" alt="close">
+     <ul class="mobile_navs display">
+      <% if(!currentUser){ %>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <% } else { %>
+      <li><a href="/about">About</a></li>
+      <li><a href="/secret">Customer Interface</a></li>
+      <li><a href="/logout">LogOut</a></li>
+      <% } %>
+  </ul> 
+  </div>
   </nav>
   <!-- Hero section -->
   <section id="home">
@@ -24,12 +52,14 @@
         <a class="button" href="/logOut">Log Out</a>
       <% } %>
     </div>
+    
   </section>
       
     </div>
   </div>
 
   <script src="/script.js"></script>
+  <script src="/scripts.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,55 @@
+.burger{
+    display: none;
+  }
+
+.mobile_navs{
+    background-color: rgba(238, 189, 143, 0.568);
+    width: 40%;
+    position: absolute;
+    right: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile_navs li{
+    list-style: none;
+    border-bottom: #ccc solid 1px;
+    width: 100%;
+  }
+  
+  .mobile_navs li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: .5rem;
+  }
+  
+  .mobile_navs li a:hover{
+    background-color: antiquewhite;
+    color: rgba(45, 58, 70, 0.562);
+  }
+
+  .burger{
+    display: none;
+  }
+
+  .display{
+    display: none;
+  }
+
+
+@media screen and (max-width: 50rem) {
+    .burger{
+      display: flex;
+  }
+  
+  .desktop_links{
+    display: none;
+  } 
+  
+  }
+  

@@ -62,6 +62,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
 }
 #heading h1, h3,h4{
     color: #002147;
@@ -77,12 +78,13 @@ form{
     align-items: center;
     margin-top: 30px;
     background-color: white;
-    width: 40%;
+    width: 50%;
     border: 2px solid #002147;
     padding-bottom: 30px;
     padding-top: 30px;
     box-shadow: 5px 5px 5px #002147;
     border-radius: 5px;
+    gap: 1rem;
     
 }
 
@@ -91,11 +93,11 @@ form input{
     flex-direction: column;
     justify-content: space-between;
     width: 400px;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 2px solid #002147;
-    padding-left: 10px;
-    height: 40px;
+    height: 3.5rem;
+    padding: 10px;
+    gap: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
 }
 
 form img{
@@ -107,9 +109,9 @@ form img{
 
 #inputs_field{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    
+    gap: 1rem;
 }
 
 #inputs_field label{
@@ -117,17 +119,18 @@ form img{
     color: #002147;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    margin: 30px;
+    /* margin: 30px; */
 }
 
 form textarea{
     width: 400px;
-    height: 250px;
+    height: 150px;
     border-radius: 5px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border: 1px solid;
     padding-left: 10px;
-    border: 2px solid #002147;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
    
 
 }
@@ -135,20 +138,18 @@ form textarea{
 #heading button{
     background-color: #002147;
     border: none;
-    width: 80px;
-    height: 30px;
+    padding: 1rem 4rem;
     border-radius: 5px;
     color: white;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 120px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 /*Media Queries*/
 
 
-@media only screen and (min-width:481px) and (max-width:615px){
+/* @media only screen and (min-width:481px) and (max-width:615px){
    
     form {
         display: flex;
@@ -238,30 +239,19 @@ form textarea{
         height: 200px;   
     }
 
-}
+} */
 
 
-@media only screen and (min-width:1081px) and (max-width:1220px){
+@media only screen and (max-width:70rem){
    
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        background-color: white;
+    form { 
         width: 70%;
-        border: 2px solid #002147;
-        padding-bottom: 30px;
-        padding-top: 30px;
-        box-shadow: 5px 5px 5px #002147;
-        border-radius: 5px;
     }
 
     form input{
         width: 25rem;
-        padding-left: 10px;
-        height: 30px;
+        /* padding-left: 10px; */
+        /* height: 30px; */
     }
 
     form textarea{
@@ -271,7 +261,7 @@ form textarea{
 
 }
 
-@media only screen and (min-width:1280px) and (max-width:1400px){
+/* @media only screen and (max-width:1400px){
    
     form {
         display: flex;
@@ -299,81 +289,63 @@ form textarea{
         height: 200px;   
     }
 
-}
+} */
 
-
-
-
-
-
-
-
-@media only screen and (min-width:320px) and (max-width:480px){
+@media only screen and (max-width:43rem){
     body{
-        width: 80%;
+        width: 100%;
         margin: 0;
         padding: 0;
     }
 
     form{
-        margin-top: 30px;
-        background-color: white;
-        width: 100%;
-        border: 2px solid #002147;
-        padding-bottom: 30px;
-        padding-top: 30px;
-        padding-right: 50px;
-        margin-left: 100px;
-            
+        width: 80%;
     }
 
     form input{
-        width: 200px;
-        padding-left: 10px;
-        height: 30px;
+        width: 25rem;
     }
-    
-    form textarea{
-        width: 200px;
-        height: 200px;   
-    }
-
-    #inputs_field label{
-        margin-right: 10px;
-        color: #002147;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        margin: 0;
-        
+}
+   
+@media screen and (max-width: 37rem){
+    form{
+        width: 90%;
     }
 
-    #inputs_field{
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items: flex-start;
-        margin: 10px;
-        
-    }
-    
-    #heading{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    #heading h1,h3,h4{
-        color: #002147;
-        font-size: 24px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: 700;
-    }
-
-    #heading button{
-        
-        margin-left: 60px;
-        cursor: pointer;
+    form input{
+        width: 25rem;
     }
     
 }
+
+@media screen and (max-width: 31rem) {
+    form input{
+        width: 17rem;
+    }
+
+    form textarea{
+        width: 17rem;
+    }
+}
+
+@media screen and (max-width: 18rem) {
+    form{
+        width: 95%;
+    }
+    form input{
+        width: 15rem;
+    }
+
+    form textarea{
+        width: 15rem;
+    }
+}
+
+
+
+
+
+
+
+
+ 
