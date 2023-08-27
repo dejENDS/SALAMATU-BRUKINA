@@ -25,13 +25,21 @@
   align-items: center;
   gap: 1rem;
 }
+
+.desktop_links{
+  justify-content: flex-end;
+}
   </style>
 </head>
 <body>
   <!-- Navigation bar -->
   <header>
     <nav>
-        <h4><li style="list-style: none;"><a href="/">Sal's Brukina</a></li></h4>
+        <h4>
+          <li style="list-style: none;">
+            <a href="/">Sal's Brukina</a>
+          </li>
+        </h4>
         <ul class="desktop_links">
             <% if(!currentUser){ %>
             <li><a href="/login">Login</a></li>
