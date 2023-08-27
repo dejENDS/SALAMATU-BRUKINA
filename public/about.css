@@ -18,18 +18,27 @@ body {
 }
 
 /* Style the navigation bar */
-nav {
-  background-color: #6d36f8d2;
-  color: #e6ef6a;
+header{
   height: 5vh;
   width: 100%;
+  background-color: #6d36f8d2;
 }
 
-nav ul {
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-inline: 1rem 2rem;
+}
+
+.desktop_links{
   list-style: none;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  padding: 10px;
+  align-items: center;
+  width: 100%;
 }
 
 nav a {
