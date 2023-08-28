@@ -49,10 +49,14 @@
             <h4>Center</h4>  
             </div>
             <div id="inputs_field"><label for="name">Name:</label>
-                <input type="text" name="name" required placeholder="Your full name" id="name">
+                <input type="text" name="name" required placeholder="Your full name" id="name"
+                <% if (currentUser) { %>value="<%= currentUser.username %>"<% } %>
+                >
             </div>
             <div id="inputs_field"><label for="email">Email:</label>
-                <input type="email" name="email" required placeholder="Your email" id="email">
+                <input type="email" name="email" required placeholder="Your email" id="email"
+                <% if (currentUser) { %>value="<%= currentUser.email %>"<% } %>
+                >
             </div>
             <div id="inputs_field"><label for="phone">Phone:</label>
                 <input type="text" name="number" required placeholder="Your phone number" id="phone">

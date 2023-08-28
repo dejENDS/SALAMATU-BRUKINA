@@ -176,6 +176,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .footer-content .logo img {
@@ -205,4 +206,28 @@ footer {
 .footer-content ul li a img {
   width: 30px;
   height: 30px;
+}
+
+.footer-content a{
+  padding: .5rem 2rem;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* .footer-content a{
+  display: flex;
+  width: 100%;
+  color: white;
+} */
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
