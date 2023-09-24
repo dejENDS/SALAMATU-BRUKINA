@@ -41,10 +41,9 @@ app.listen(port, () => {
 });
 
 async function main() {
-    //     mongoose.connect("mongodb://127.0.0.1:27017/brukina");
-    
+    // mongoose.connect("mongodb+srv://dnnadjei:DAydNNya@salsburkina.yln5sw7.mongodb.net/");
     try {
-        mongoose.connect("mongodb+srv://dnnadjei:DAydNNya@salsburkina.yln5sw7.mongodb.net/");
+        mongoose.connect("mongodb://127.0.0.1:27017/brukina");
         console.log("Connected");
     } catch (error) {
         console.log("failed to connect");
