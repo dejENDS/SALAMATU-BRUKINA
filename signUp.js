@@ -1,26 +1,22 @@
-var express = require('express'),
-    mongoose = require('mongoose'),
-    bodyParser = require('body-parser'),
-    passport = require("passport"),
-    localStrategy = require("passport-local"),
-    passportLocalMongoose = require("passport-local-mongoose"),
-    User = require("./models/user"),
-    expressSession = require("express-session"),
-    generateRoutes = require('./routes/routes');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const passport = require("passport");
+const localStrategy = require("passport-local");
+const passportLocalMongoose = require("passport-local-mongoose");
+const User = require("./models/user");
+const expressSession = require("express-session");
+const generateRoutes = require('./routes/routes');
 
-try {
-    main()
-} catch (error) {
-    console.log('failed to connect to database')
-    return 0;
-}
+const app = express();
+const port = process.env.PORT || 3000;
 
-var app = express();
+// Session middleware 
 app.use(expressSession({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false
-}))
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -28,28 +24,33 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
+// Passport strategies and serialization/deserialization 
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-const port = process.env.PORT || 3000;
-
-generateRoutes(app, passport, User);
-
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
-
+// MongoDB using async/await
 async function main() {
-    // mongoose.connect("mongodb+srv://dnnadjei:DAydNNya@salsburkina.yln5sw7.mongodb.net/");
     try {
-        mongoose.connect("mongodb://127.0.0.1:27017/brukina");
-        console.log("Connected");
+        await mongoose.connect("mongodb+srv://dnnadjei:DAydNNya@salsburkina.yln5sw7.mongodb.net/");
+        console.log("Connected to MongoDB");
     } catch (error) {
-        console.log("failed to connect");
-        
+        console.error("Failed to connect to MongoDB:", error);
+        throw error;
     }
 }
 
-// export default { app, passport };
-module.exports = { app, passport };
+main()
+    .then(() => {
+        // Generation of routes and starting the Express app
+        generateRoutes(app, passport, User);
+        app.listen(port, () => {
+            console.log(`Listening on port ${port}`);
+        });
+    })
+    .catch((error) => {
+        console.error("Application startup error:", error);
+    });
+
+
+  module.exports = { app, passport };
